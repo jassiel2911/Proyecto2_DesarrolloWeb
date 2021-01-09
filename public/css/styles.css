@@ -64,7 +64,7 @@ html{
 /* Fonts */
 	/*
 	font-family: 'Poppins', sans-serif;
-	font-family: 'Lato', sans-serif; 
+	font-family: 'Lato', sans-serif;
 	*/
 
 body{
@@ -93,7 +93,7 @@ body{
 		font-size: 2.2rem;
 	}
 	h2{
-		font-family: 'Lato', sans-serif; 
+		font-family: 'Lato', sans-serif;
 	}
 	.text-orange{
 		color: var(--orange);
@@ -112,7 +112,7 @@ body{
 		padding: 8px 0;
 		color: white;
 	}
-	
+
 	.btn-primary{
 		background-color: var(--yellow) !important;
 		color: #000;
@@ -145,6 +145,25 @@ body{
 	}
 
 /* Welcome */
+
+/*.carousel .carousel-inner .img {
+    height: 100px;
+    align-items: center;
+}*/
+
+.titulo-viajes{
+    text-align: center;
+}
+
+.mapa{
+    position: relative;
+
+}
+
+.video{
+    align-items: center;
+}
+
 	.welcome-foto{
 		width: 10rem;
 		height: 10rem;
@@ -219,12 +238,12 @@ body{
 		font-weight: 400;
 		color: var(--purple);
 	}
-	
+
 	form a{
 		transition-property: text-decoration;
 		transition-duration: 400ms;
 	}
-	
+
 	form a:hover{
 		color: var(--purple);
 		text-decoration: underline;
@@ -252,7 +271,7 @@ body{
 		color: #000;
 	}
 	.navbar-nav .nav-item .nav-link{
-		font-family: 'Lato', sans-serif; 
+		font-family: 'Lato', sans-serif;
 		font-size: 1.2rem;
 		font-weight: 500 !important;
 		color: #000;
@@ -267,7 +286,7 @@ body{
 	nav .dropdown-menu{
 		background-color: rgba(181, 122, 250, .2);
 		border-style: none;
-		font-family: 'Lato', sans-serif; 
+		font-family: 'Lato', sans-serif;
 		font-size: 1.2rem;
 		font-weight: 500 !important;
 		color: #000;
@@ -372,7 +391,7 @@ body{
 /* Curso index */
 	.pendientesh2{
 		font-size: 1.5rem;
-	}	
+	}
 	.cursos-index .card{
 		-webkit-box-shadow: 0px 4px 8px 2px rgba(255, 192, 61, .5);
 		-moz-box-shadow: 0px 4px 8px 2px rgba(255, 192, 61, .5);
@@ -421,7 +440,7 @@ body{
 
 /* Ver tarea */
 	table{
-		font-family: 'Lato', sans-serif; 
+		font-family: 'Lato', sans-serif;
 		font-size: 1rem;
 	}
 	table th{
@@ -441,12 +460,12 @@ body{
 		width: 90vw;
 }
 .perfil h2{
-	font-family: 'Lato', sans-serif; 
+	font-family: 'Lato', sans-serif;
 	font-size: 1.7rem;
 	color: var(--orange);
 }
 .perfil p{
-	font-family: 'Lato', sans-serif; 
+	font-family: 'Lato', sans-serif;
 	font-size: 1.1rem;
 }
 .perfil label{
@@ -454,7 +473,7 @@ body{
 }
 .perfil form img{
 	width: 100%;
-	
+
 }
 .perfil form .row .col{
 	flex-direction: column;

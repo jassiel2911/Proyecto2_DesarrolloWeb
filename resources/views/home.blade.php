@@ -1,55 +1,70 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{{asset('css/app.css')}}">
-	<link rel="stylesheet" href="{{asset('css/styles.css')}}">
-	<link rel="stylesheet" href="{{asset('css/mediaqueries.css')}}">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="shortcut icon" href="{{asset('img/avion_inicio.jpg')}}">
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+@extends('layouts.app')
+
+@section('content')
+<main class="container">
+<br>
+<br>
+
+<div class="home-title row">
+    <div class="home-title_text pl-3 mr-5">
+        <h1 class="mt-4 mt-sm-5 text-ydark ">Conoce las mejores opciones para Viajar</h1>
+        <p>Blog de Viajes</p>
+    </div>
     
-	<title>Blog de viajes</title>
-</head>
+</div>
+<div id="carouselExampleControls" class="carousel slide welcome_carousel" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="imag" src="{{asset('img/foto1.jpeg')}}" class="d-block " alt="general">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{asset('img/foto2.jpeg')}}" class="d-block " alt="personas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{asset('img/foto3.jpeg')}}" class="d-block " alt="tulum">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <br>
+            <br>
+            <div class="info">
+                <h1 class="titulo-viajes">Viajes</h1>
+                <p class="">
+                <h2>
+                    ¿Buscas un lugar donde relajarte?
+                </h2>
+                ¡Estás en el lugar indicado!
+                <br>
+                En este sitio web podrás encontrar los mejores lugares para poder vacacionar
+                después de un intenso periodo de trabajo.
 
-<body class="body-welcome p-3 center">
-	<div class="welcome-foto welcome-foto_login mx-auto mt-3 mt-md-5 mt-lg-3">
-	</div>
-	<h1 class="text-center mt-4 pt-2"><span>¡</span>Bienvenido<span> al blog de viajes</span></h1>
-	<h2 class="text-center mt-4">Inicia sesión</h2>
+                </p>
 
-	<form class="container d-flex mt-3 mt-md-3" method="POST" action="{{route('login')}}">
-    @csrf
-		<!-- Email -->
-		
-        <input id="email"  placeholder="E-mail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-        @error('email')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-        @enderror
-		<!-- Contraseña -->
-		
-        <input id="password" placeholder="Contraseña" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-        @error('password')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-        @enderror
-		<!-- Remember me -->
-		<label id="remember-me" class="d-flex" for="remember-me"><input class="form-check-input" type="checkbox" name="remember" id="remember">Recordarme
-        </label>
-		<a href="{{route('register')}}" class="text-right text-purple form-label-link">¿No tienes cuenta? Regístrate aqui</a>
-		<input type="submit" value="Entrar" id="submit" class="btn btn-secondary mb-4 mx-auto mt-3 mt-md-4">
-	</form>
+                <br>
 
-
-</body>
-<script src="{{asset('js/app.js')}}"></script>
-</html>
+                <h1 class="titulo-viajes"> Post Recientes </h1>
+                <div class="post">
+                    Pendiente
+                </div>
+            </div>
+            <br>
+            <section class="redes">
+                <div class="redes" style="display: inline-block;padding: 2vw;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98360.72951072111!2d-99.1280514071814!3d19.43561819881024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc77bd93229f%3A0x2d07ef561bad244!2sAeropuerto%20Internacional%20de%20la%20Ciudad%20de%20M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1610177581735!5m2!1ses-419!2smx" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                </iframe>
+                </div>
+                <div class="redes" style="display: inline-block;padding: 2vw;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QBsnXMZjdGQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                </div>
+            </section>
+</main>
+@endsection

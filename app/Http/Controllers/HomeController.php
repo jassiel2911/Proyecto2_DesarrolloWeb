@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tarea;
+use App\Models\Entrega;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $id=auth()->user()->id;
+        $entregas=Entrega::where('user_id',$id)->get();
+        $bandera=0;
+        $tareas = Tarea::all();
+        return view('home',['tareas'=>$tareas, 'entregas'=>$entregas, 'bandera'=>$bandera]);
+    }
+
+    public function cal(){
+        
+        $tareas = Tarea::all();
+        return view('cal',['tareas'=>$tareas]);
     }
 }
